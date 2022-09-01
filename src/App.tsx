@@ -3,6 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import React from 'react';
 import './App.css';
 import { DemoForm } from './FormDemo';
+import { sendEmail } from "./emailApi"
 
 export const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
@@ -20,10 +21,13 @@ export const LogoutButton = () => {
   const { logout } = useAuth0();
   const { user, isAuthenticated, isLoading } = useAuth0();
   if (!isLoading && isAuthenticated) {
-    console.log(user);
+    console.log(user.email);
+    sendEmail(user.email)
     return (
       <React.Fragment>
-        <button onClick={() => logout({ returnTo: window.location.origin })}>
+        <button onClick={() => {
+          logout({ returnTo: window.location.origin })
+        }}>
           Log Out
         </button>
       </React.Fragment>
@@ -43,9 +47,10 @@ function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (!isLoading && isAuthenticated) {
-    console.log(user)
+    //console.log(user)
     return (
       <div className="App">
+        <b>{user.email}</b>
         <p>
           Base React Typescript Form Template
         </p>
