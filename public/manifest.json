@@ -1,0 +1,6 @@
+{
+  "short_name": "React Template",
+  "name": "Base React Typescript Template",
+  "start_url": ".",
+  "display": "standalone"
+}
