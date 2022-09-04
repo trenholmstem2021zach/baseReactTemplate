@@ -20,7 +20,7 @@ export const LoginButton = () => {
 export const LogoutButton = () => {
   const { logout } = useAuth0();
   const { user, isAuthenticated, isLoading } = useAuth0();
-  if (!isLoading && isAuthenticated) {
+  if (!isLoading && isAuthenticated && user) {
     console.log(user.email);
     sendEmail(user.email)
     return (
@@ -46,7 +46,7 @@ export const LogoutButton = () => {
 function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
-  if (!isLoading && isAuthenticated) {
+  if (!isLoading && isAuthenticated && user) {
     //console.log(user)
     return (
       <div className="App">
