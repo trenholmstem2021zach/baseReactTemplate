@@ -12,7 +12,7 @@ export const AuthButton = () => {
         return <button onClick={() => loginWithRedirect()}>Log In</button>;
     } else {
         return <div>
-            (<UserInfo />) : <button onClick={() => {
+            (<UserInfo user={user} />) : <button onClick={() => {
                 logout({ returnTo: window.location.origin })
             }}>
                 Log Out
