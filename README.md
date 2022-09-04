@@ -27,3 +27,7 @@ Error: Failed to initialize watch plugin "node_modules/jest-watch-typeahead/file
 - [Formik](https://formik.org/)
 - [React Hook Form](https://react-hook-form.com/)
 - [Create App Typescript](https://create-react-app.dev/docs/adding-typescript/)
+- [Atomic Design](https://atomicdesign.bradfrost.com/)
+- [React Location](https://react-location.tanstack.com/)
+- [React Grid](https://reactgrid.com/)
+- [React Spreadsheet](https://github.com/iddan/react-spreadsheet)
