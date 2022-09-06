@@ -4,6 +4,22 @@
 - [NodeJS](https://nodejs.org/en/download/)
 - [NVM](https://github.com/nvm-sh/nvm#installing-and-updating)
 
+## Build Run Local
+
+### Set Auth0 Environement Variables
+
+- export REACT_APP_AUTH0DOMAIN
+- export REACT_APP_AUTH0CLIENTID
+
+### Install Modules and Run
+- yarn
+- yarn start
+
+## Docker run
+<pre>. ./buildAndRun.sh "dev-sfpt-yw1.us.auth0.com" "14w1mnx35YfyJVCFA7HnTn32La2E0gbS"</pre>
+
+
+
 ## Common Issues
 
 - Node Current Updated Version 
@@ -24,6 +40,7 @@ Error: Failed to initialize watch plugin "node_modules/jest-watch-typeahead/file
 ## Key References
 - [manifest files](https://web.dev/add-manifest/)
 - [ReactJS](https://reactjs.org/)
+- [USWDS Design System](https://designsystem.digital.gov/documentation/getting-started/developers/phase-one-install/)
 - [Formik](https://formik.org/)
 - [React Hook Form](https://react-hook-form.com/)
 - [Create App Typescript](https://create-react-app.dev/docs/adding-typescript/)

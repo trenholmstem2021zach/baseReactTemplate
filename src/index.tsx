@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
 const auth0Domain=process.env.REACT_APP_AUTH0DOMAIN || "";
 const auth0ClientId=process.env.REACT_APP_AUTH0CLIENTID || "";
 
