@@ -1,4 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
+import { TypeFormDemo } from "./TypeformDemo";
 
 import React from 'react';
 import { UserInfo } from "../atoms/UserInfo";
@@ -12,12 +13,13 @@ export const AuthButton = () => {
         return <button onClick={() => loginWithRedirect()}>Log In</button>;
     } else {
         return <div>
-            (<UserInfo user={user} />) : <button onClick={() => {
+            (<UserInfo />) : <button onClick={() => {
                 logout({ returnTo: window.location.origin })
             }}>
                 Log Out
             </button>
             <BasicForm/>
+            <TypeFormDemo/>
         </div>
 
 
