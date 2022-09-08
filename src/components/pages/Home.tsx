@@ -1,7 +1,10 @@
-import { userContext } from "../../auth/userContext";
 
-export function Home() {
-    return <userContext.Consumer>
-        {value => <h1>{value.email}</h1>}
-    </userContext.Consumer>
+
+export default function Home() {
+    return (<>
+        <h3 className="site-preview-heading" id="big-footer">Home Section</h3>
+        <div className="grid-container usa-header">
+            Home Page
+        </div>
+    </>)
 }

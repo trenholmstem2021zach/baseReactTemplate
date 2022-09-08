@@ -8,13 +8,13 @@ export const AuthButton = () => {
     if (user === undefined || isLoading || !isAuthenticated) {
         return <button onClick={() => loginWithRedirect()}>Log In</button>;
     } else {
-        return <div>
+        return <>
             (<UserInfo />) : <button onClick={() => {
                 logout({ returnTo: window.location.origin })
             }}>
                 Log Out
             </button>
-        </div>
+        </>
 
 
     }

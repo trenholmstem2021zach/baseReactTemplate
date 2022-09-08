@@ -1,26 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import { Home } from "./components/pages/Home"
-import { Header } from "./components/organisms/Header";
-
-import { userContext, UserType } from './auth/userContext';
-//import { useAuth0 } from '@auth0/auth0-react';
-//import { current } from '@reduxjs/toolkit';
-import { AuthButton } from './components/molecules/AuthButton';
+import { Footer } from './components/organisms/Footer';
+import Header from './components/organisms/Header';
+import ValidRoutes from './ValidRoutes';
 
 function App() {
-  //const { user } = useAuth0();
-  const [currentUser, setCurrentUser] = useState<UserType>({ email: undefined, role: undefined });
-  //const [authenicated, isAuthenticated] = useState<Boolean>(false);
 
-
-    return (
-      <userContext.Provider value={currentUser}>
-        <Header />
-        <Home />
-        <AuthButton/>
-      </userContext.Provider>
-    )
+  return (
+    <>
+      <BrowserRouter >
+      <Header/>
+        <ValidRoutes />
+        <Footer/>
+      </BrowserRouter>
+    </>
+  )
 
 }
 
