@@ -1,6 +1,7 @@
+import { userContext } from "../../auth/userContext";
 
 export function Home() {
-    return <div>
-        Home
-    </div>
+    return <userContext.Consumer>
+        {value => <h1>{value.email}</h1>}
+    </userContext.Consumer>
 }
