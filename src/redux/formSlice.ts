@@ -1,4 +1,4 @@
-import { AnyAction, createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 import axios from "axios";
 
 
@@ -15,16 +15,15 @@ const initialState: FormState = {
     data: {},
 }
 
-export const getDataAsync = (data: any) => async (dispatch: (arg0: AnyAction) => void) => {
+export const getDataAsync = () => async (dispatch: any) => {
     try {
-        console.log(`${API_URL}/${data}`)
-      const response = await axios.get(`${API_URL}/${data}`);
-      console.log(JSON.stringify(response.data))
-      dispatch(getData(response.data));
+        const response = await axios.get(`${API_URL}/1`);
+        console.log(JSON.stringify(response.data))
+        dispatch(getData(response.data));
     } catch (err: any) {
-      throw new Error(err);
+        throw new Error(err);
     }
-  };
+};
 
 export const formSlice = createSlice({
     name: 'counter',
@@ -34,7 +33,7 @@ export const formSlice = createSlice({
             state.value = JSON.stringify(action.payload);
         },
         getData: (state, action) => {
-            console.log("HERE" + action.payload); 
+            console.log("HERE" + action.payload);
             state.data = action.payload;
         },
     },
