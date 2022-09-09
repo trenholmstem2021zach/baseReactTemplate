@@ -10,7 +10,7 @@ export default function Header() {
             <div className="usa-nav-container">
                 <div className="usa-navbar">
                     <div className="usa-logo" id="-logo">
-                        <em className="usa-logo__text"><a href="/" title="Home">Home</a></em>
+                        <em className="usa-logo__text">Home</em>
                         
                     </div>
                     <button type="button" className="usa-menu-btn">Menu</button>
@@ -18,56 +18,11 @@ export default function Header() {
                 </div>
                 <nav aria-label="Primary navigation" className="usa-nav">
                     <button type="button" className="usa-nav__close">
-                        <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+              here
                     </button>
                     <ul className="usa-nav__primary usa-accordion">
-                        <li className="usa-nav__primary-item">
-                            <button
-                                type="button"
-                                className="usa-accordion__button usa-nav__link usa-current"
-                                aria-expanded="false"
-                                aria-controls="basic-nav-section-one"
-                            >
-                                <span>&lt;Current section&gt;</span>
-                            </button>
-                            <ul id="basic-nav-section-one" className="usa-nav__submenu">
-                                <li className="usa-nav__submenu-item">
-                                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                                </li>
-                                <li className="usa-nav__submenu-item">
-                                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                                </li>
-                                <li className="usa-nav__submenu-item">
-                                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                                </li>
-                                <li className="usa-nav__submenu-item">
-                                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li className="usa-nav__primary-item">
-                            <button
-                                type="button"
-                                className="usa-accordion__button usa-nav__link"
-                                aria-expanded="false"
-                                aria-controls="basic-nav-section-two"
-                            >
-                                <span>&lt;Section&gt;</span>
-                            </button>
-                            <ul id="basic-nav-section-two" className="usa-nav__submenu">
-                                <li className="usa-nav__submenu-item">
-                                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                                </li>
-                                <li className="usa-nav__submenu-item">
-                                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                                </li>
-                                <li className="usa-nav__submenu-item">
-                                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li className="usa-nav__primary-item">
-                            <a href="" className="usa-nav-link"><span>&lt;Simple link&gt;</span></a>
+                            <li className="usa-nav__primary-item">
+                            <a href="/about" className="usa-nav-link"><span>About</span></a>
                         </li>
                     </ul>
                     <section aria-label="Search component">
@@ -81,7 +36,7 @@ export default function Header() {
                             />
                             <button className="usa-button" type="submit">
                                 <img
-                                    src="/assets/img/usa-icons-bg/search--white.svg"
+                                    src="/images/search.jpeg"
                                     className="usa-search__submit-icon"
                                     alt="Search"
                                 />
