@@ -1,4 +1,4 @@
-import { AnyAction, createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 import axios from "axios";
 
 
@@ -15,7 +15,7 @@ const initialState: FormState = {
     data: {},
 }
 
-export const getDataAsync = (data: any) => async (dispatch: (arg0: AnyAction) => void) => {
+export const getDataAsync = (data: any) => async (dispatch: any)  => {
     try {
         console.log(`${API_URL}/${data}`)
       const response = await axios.get(`${API_URL}/${data}`);
