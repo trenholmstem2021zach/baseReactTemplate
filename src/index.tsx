@@ -1,24 +1,29 @@
 import { Auth0Provider } from "@auth0/auth0-react";
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { store } from './redux/formStore'
+import { Provider } from 'react-redux'
 
-const auth0Domain=process.env.REACT_APP_AUTH0DOMAIN || "";
-const auth0ClientId=process.env.REACT_APP_AUTH0CLIENTID || "";
+import reportWebVitals from "./reportWebVitals";
+
+const auth0Domain = process.env.REACT_APP_AUTH0DOMAIN || "";
+const auth0ClientId = process.env.REACT_APP_AUTH0CLIENTID || "";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
     <Auth0Provider
-			domain={auth0Domain}
-			clientId={auth0ClientId}
-			redirectUri={window.location.origin}
-		>
-    <App />
+      domain={auth0Domain}
+      clientId={auth0ClientId}
+      redirectUri={window.location.origin}
+    >
+      <Provider store={store}>
+      <App />
+      </Provider>
     </Auth0Provider>
   </React.StrictMode>
 );
