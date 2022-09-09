@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import type { RootState } from '../../redux/formStore'
 import { formSave, getDataAsync } from '../../redux/formSlice'
 import { TypeFormDemo } from "./TypeformDemo";
+import { useAppDispatch } from "../../redux/hooks";
 
 
 const sleep = (ms: number | undefined) =>
@@ -11,6 +12,8 @@ const sleep = (ms: number | undefined) =>
 export default function HookFormDemo() {
   const data = useSelector((state: RootState) => state.form)
   const dispatch = useDispatch()
+  const appDispatch = useAppDispatch();
+
 
   const {
     register,
@@ -23,7 +26,7 @@ export default function HookFormDemo() {
    
     if (data.username === "bill") {
       dispatch(formSave(data));
-      dispatch(getDataAsync(1));
+      appDispatch(getDataAsync());
     } else {
       alert("There is an error");
     }
