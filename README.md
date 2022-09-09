@@ -45,11 +45,15 @@ Error: Failed to initialize watch plugin "node_modules/jest-watch-typeahead/file
 - [ReactJS](https://reactjs.org/)
 - [React Prettier](https://prettier.io/docs/en/install.html)
 - [Husky Git Hook](https://typicode.github.io/husky/#/)
-- [USWDS Design System](https://designsystem.digital.gov/documentation/getting-started/developers/phase-one-install/)
-- [Formik](https://formik.org/)
+- [USWDS Design System](https://designsystem.digital.gov/documentation/getting-started/developers/phase-one-install/)=
 - [React Hook Form](https://react-hook-form.com/)
+- [Redux](https://redux.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Create App Typescript](https://create-react-app.dev/docs/adding-typescript/)
 - [Atomic Design](https://atomicdesign.bradfrost.com/)
+
+### --- FUTURE ---
+
 - [React Location](https://react-location.tanstack.com/)
 - [React Grid](https://reactgrid.com/)
 - [React Spreadsheet](https://github.com/iddan/react-spreadsheet)
