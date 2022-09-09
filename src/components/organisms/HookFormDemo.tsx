@@ -1,14 +1,15 @@
 import { useForm } from "react-hook-form";
 import { useSelector, useDispatch } from 'react-redux'
 import type { RootState } from '../../redux/formStore'
-import { formSave } from '../../redux/formSlice'
+import { formSave, getDataAsync } from '../../redux/formSlice'
+import { TypeFormDemo } from "./TypeformDemo";
 
 
 const sleep = (ms: number | undefined) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
 export default function HookFormDemo() {
-  const count = useSelector((state: RootState) => state.form.value)
+  const data = useSelector((state: RootState) => state.form)
   const dispatch = useDispatch()
 
   const {
@@ -21,6 +22,7 @@ export default function HookFormDemo() {
    
     if (data.username === "bill") {
       dispatch(formSave(data));
+      dispatch(getDataAsync(1));
     } else {
       alert("There is an error");
     }
@@ -55,8 +57,10 @@ export default function HookFormDemo() {
       </fieldset>
     </form>
     <pre>
-      {JSON.stringify(count)}
+     
+      {JSON.stringify({data})}
     </pre>
+    <TypeFormDemo/>
     </>
   );
 }
