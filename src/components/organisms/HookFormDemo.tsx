@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useSelector, useDispatch } from 'react-redux'
 import type { RootState } from '../../redux/formStore'
-import { decrement, increment } from '../../redux/counterSlice'
+import { increment } from '../../redux/counterSlice'
 
 
 const sleep = (ms: number | undefined) =>
@@ -18,8 +18,9 @@ export default function HookFormDemo() {
   } = useForm();
   const onSubmit = async (data: any) => {
     await sleep(2000);
+   
     if (data.username === "bill") {
-      alert(JSON.stringify(data));
+      dispatch(increment(data));
     } else {
       alert("There is an error");
     }
@@ -29,19 +30,6 @@ export default function HookFormDemo() {
 
   return (
     <>
-    <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
     <form className="usa-form usa-form--large" onSubmit={handleSubmit(onSubmit)}>
       <h1>Async Submit Validation</h1>
       <fieldset className="usa-fieldset">
@@ -66,6 +54,9 @@ export default function HookFormDemo() {
       <input type="submit" />
       </fieldset>
     </form>
+    <pre>
+      {JSON.stringify(count)}
+    </pre>
     </>
   );
 }
