@@ -31,10 +31,9 @@ export default function HookFormDemo() {
 
       <label className="usa-label " htmlFor="email">Email</label>
       <input className="usa-input usa-input--xl"
-       {...register("exampleRequired", { required: true })}
-        placeholder="bluebill1049@hotmail.com"
+        placeholder="Enter a Valid Email"
         type="text"
-        {...register("email")}
+        {...register("email", { required: true })}
       />
       {errors.exampleRequired && <span>This field is required</span>}
 
