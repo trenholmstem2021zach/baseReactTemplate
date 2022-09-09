@@ -1,16 +1,12 @@
-import * as React from 'react';
-import {
-  Formik,
-  Form,
-  Field,
-} from 'formik';
+import * as React from "react";
+import { Formik, Form, Field } from "formik";
 
 interface MyFormValues {
   firstName: string;
 }
 
 export const BasicForm: React.FC<{}> = () => {
-  const initialValues: MyFormValues = { firstName: '' };
+  const initialValues: MyFormValues = { firstName: "" };
   return (
     <div>
       <h1>My Example</h1>

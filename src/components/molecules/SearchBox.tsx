@@ -1,5 +1,3 @@
 export function SearchBox() {
-    return <>
-        Searchbox
-    </>
+  return <>Searchbox</>;
 }

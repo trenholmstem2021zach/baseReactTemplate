@@ -1,5 +1,7 @@
 export function BasicButton() {
-    return <>
-        <button>Button</button>
+  return (
+    <>
+      <button>Button</button>
     </>
+  );
 }

@@ -1,15 +1,15 @@
-
 import { useForm } from "react-hook-form";
 
-const sleep = (ms: number | undefined) => new Promise((resolve) => setTimeout(resolve, ms));
+const sleep = (ms: number | undefined) =>
+  new Promise((resolve) => setTimeout(resolve, ms));
 
 export default function HookFormDemo() {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm();
-  const onSubmit = async (data:any) => {
+  const onSubmit = async (data: any) => {
     await sleep(2000);
     if (data.username === "bill") {
       alert(JSON.stringify(data));
