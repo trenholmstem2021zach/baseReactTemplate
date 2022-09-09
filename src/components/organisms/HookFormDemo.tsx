@@ -21,26 +21,30 @@ export default function HookFormDemo() {
   console.log(errors);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className="usa-form usa-form--large" onSubmit={handleSubmit(onSubmit)}>
       <h1>Async Submit Validation</h1>
-      <label htmlFor="username">User Name</label>
-      <input placeholder="Bill" {...register("username")} />
+      <fieldset className="usa-fieldset">
+      <label className="usa-label " htmlFor="username">User Name</label>
+      <input className="usa-input usa-input--xl" placeholder="Bill" {...register("username")} />
+      <label className="usa-label " htmlFor="lastName">Last Name</label>
+      <input className="usa-input usa-input--xl" placeholder="Luo" {...register("lastName")} />
 
-      <label htmlFor="lastName">Last Name</label>
-      <input placeholder="Luo" {...register("lastName")} />
-
-      <label htmlFor="email">Email</label>
-      <input
+      <label className="usa-label " htmlFor="email">Email</label>
+      <input className="usa-input usa-input--xl"
+       {...register("exampleRequired", { required: true })}
         placeholder="bluebill1049@hotmail.com"
         type="text"
         {...register("email")}
       />
+      {errors.exampleRequired && <span>This field is required</span>}
 
       <div style={{ color: "red" }}>
         {Object.keys(errors).length > 0 &&
           "There are errors, check your console."}
       </div>
+      <hr/>
       <input type="submit" />
+      </fieldset>
     </form>
   );
 }
