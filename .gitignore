@@ -111,3 +111,5 @@ public/.DS_Store
 cypress/.DS_Store
 cypress/videos/SampleTest.cy.ts.mp4
 .DS_Store
+cypress/screenshots/SampleTest.cy.ts/Sample Test Demo 01 -- Home Page Test (failed).png
+.gitignore
