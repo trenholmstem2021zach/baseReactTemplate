@@ -40,12 +40,12 @@ export default function HookFormDemo() {
       <h1>Async Submit Validation</h1>
       <fieldset className="usa-fieldset">
       <label className="usa-label " htmlFor="username">User Name</label>
-      <input className="usa-input usa-input--xl" placeholder="Bill" {...register("username")} />
-      <label className="usa-label " htmlFor="lastName">Last Name</label>
-      <input className="usa-input usa-input--xl" placeholder="Luo" {...register("lastName")} />
+      <input id="FirstName" className="usa-input usa-input--xl" placeholder="Bill" {...register("username")} />
+      <label  className="usa-label " htmlFor="lastName">Last Name</label>
+      <input id="LastName" className="usa-input usa-input--xl" placeholder="Luo" {...register("lastName")} />
 
       <label className="usa-label " htmlFor="email">Email</label>
-      <input className="usa-input usa-input--xl"
+      <input id="Email" className="usa-input usa-input--xl"
         placeholder="Enter a Valid Email"
         type="text"
         {...register("email", { required: true })}
@@ -57,13 +57,13 @@ export default function HookFormDemo() {
           "There are errors, check your console."}
       </div>
       <hr/>
-      <input type="submit" />
+      <input id="SubmitButton" type="submit" />
       </fieldset>
     </form>
-    <pre>
+    <div id="result">
      
       {JSON.stringify({data})}
-    </pre>
+    </div>
     <TypeFormDemo/>
     </>
   );

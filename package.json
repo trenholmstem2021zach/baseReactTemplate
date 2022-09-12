@@ -66,6 +66,7 @@
     "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
   },
   "devDependencies": {
+    "cypress": "^10.7.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1"
