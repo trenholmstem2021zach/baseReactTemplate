@@ -1,4 +1,5 @@
 # Logs
+.DS_Store
 yarn.lock
 logs
 build
@@ -107,3 +108,6 @@ dist
 .tern-port
 yarn.lock
 public/.DS_Store
+cypress/.DS_Store
+cypress/videos/SampleTest.cy.ts.mp4
+.DS_Store
