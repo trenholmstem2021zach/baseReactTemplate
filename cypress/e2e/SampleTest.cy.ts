@@ -4,7 +4,7 @@ describe('Sample Test Demo 01', () => {
   })
   
   it('Home Page Test', () => {
-    cy.visit('https://base-react-template.vercel.app/')
+    cy.visit('http://localhost:3000')
     cy.contains("Async Submit Validation")
     cy.get('#FirstName').type("bill")
     cy.get('#LastName').type("Last Name")

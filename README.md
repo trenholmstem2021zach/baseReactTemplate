@@ -17,6 +17,12 @@
 - yarn
 - yarn start
 
+### Cypress Testing
+
+NOTE: Start the server in one terminal window first
+
+- yarn cypress run --headless
+
 ## Docker run
 
 <pre>. ./buildAndRun.sh "dev-sfpt-yw1.us.auth0.com" "14w1mnx35YfyJVCFA7HnTn32La2E0gbS"</pre>
@@ -49,6 +55,7 @@ Error: Failed to initialize watch plugin "node_modules/jest-watch-typeahead/file
 - [React Hook Form](https://react-hook-form.com/)
 - [Redux](https://redux.js.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Cypress E2E Testing](https://www.cypress.io/)
 - [Create App Typescript](https://create-react-app.dev/docs/adding-typescript/)
 - [Atomic Design](https://atomicdesign.bradfrost.com/)
 
