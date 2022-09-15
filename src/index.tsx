@@ -5,7 +5,11 @@ import "./index.css";
 import App from "./App";
 import { store } from './redux/formStore'
 import { Provider } from 'react-redux'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+
 
 
 import reportWebVitals from "./reportWebVitals";
