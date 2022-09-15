@@ -6,6 +6,12 @@ import App from "./App";
 import { store } from './redux/formStore'
 import { Provider } from 'react-redux'
 
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+
+
+
 import reportWebVitals from "./reportWebVitals";
 
 const auth0Domain = process.env.REACT_APP_AUTH0DOMAIN || "";

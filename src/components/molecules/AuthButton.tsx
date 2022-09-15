@@ -6,12 +6,12 @@ export const AuthButton = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (user === undefined || isLoading || !isAuthenticated) {
-    return <button onClick={() => loginWithRedirect()}>Log In</button>;
+    return <button className="btn btn-light" onClick={() => loginWithRedirect()}>Log In</button>;
   } else {
     return (
       <>
         (<UserInfo />) :{" "}
-        <button
+        <button type="button" className="btn btn-light"
           onClick={() => {
             logout({ returnTo: window.location.origin });
           }}
