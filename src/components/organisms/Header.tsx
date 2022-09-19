@@ -6,6 +6,7 @@ import { HomeDropDownAuth } from "../molecules/HomeDropDownAuth";
 import { HomeDropDownPublic } from "../molecules/HomeDropDownPublic";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import PostsList from "../templates/PostList";
 export default function Header() {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
@@ -89,6 +90,9 @@ export default function Header() {
               </ul>
             </div>
           </div>
+        </div>
+        <div>
+          <PostsList />
         </div>
       </header>
     </>

@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import Header from "../components/organisms/Header";
 
 test("renders", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Base React Typescript Form Template/i);
+  render(<Header />);
+  const linkElement = screen.getByText(/Log In/i);
   expect(linkElement).toBeInTheDocument();
 });

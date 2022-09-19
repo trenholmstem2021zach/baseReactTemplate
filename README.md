@@ -53,6 +53,8 @@ Error: Failed to initialize watch plugin "node_modules/jest-watch-typeahead/file
 - [Husky Git Hook](https://typicode.github.io/husky/#/)
 - [USWDS Design System](https://designsystem.digital.gov/documentation/getting-started/developers/phase-one-install/)=
 - [React Hook Form](https://react-hook-form.com/)
+- [React PDF](https://react-pdf.org/)
+- [PDFKit React](https://pdfkit.org/)
 - [Mock Service Worker](https://mswjs.io/docs/)
 - [JSON Server](https://github.com/typicode/json-server)
 - [Redux](https://redux.js.org/)

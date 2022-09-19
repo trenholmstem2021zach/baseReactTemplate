@@ -7,5 +7,8 @@
   "files.autoSave": "onFocusChange",
   "[typescript]": {
     "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
   } // optional but recommended
 }
