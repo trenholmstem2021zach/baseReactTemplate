@@ -15,6 +15,7 @@
 ### Install Modules and Run
 
 - yarn
+- yarn test
 - yarn start
 
 ### Cypress Testing
