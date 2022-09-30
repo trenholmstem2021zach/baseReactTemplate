@@ -57,3 +57,22 @@
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }
+
+.nav-link {
+  color: #cc0000;
+  background-color: #a81005 !important;
+}
+
+html {
+  height: 100;
+};
+
+body {
+  height: 100;
+  background:rgb(83, 82, 82);
+  background: radial-gradient(
+    circle,
+    rgb(73, 124, 116) 0%,
+    rgb(118, 136, 243) 100%
+  );
+}
